@@ -1,14 +1,23 @@
-/* Fondo general */
 :host {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: linear-gradient(135deg, #0f4c75, #3282b8);
+    background-size: 200% 200%;
+    animation: fondoAnimado 10s ease infinite;
+
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: none;
 }
 
-/* Contenedor externo */
+@keyframes fondoAnimado {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .login-wrapper {
     width: 100%;
     display: flex;
@@ -16,7 +25,6 @@
     align-items: center;
 }
 
-/* Tarjeta */
 .login-card {
     background-color: #ffffff;
     width: 360px;
@@ -24,12 +32,35 @@
     border-radius: 18px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
     text-align: center;
+
+    animation: aparecer 0.8s ease-out;
 }
 
-/* Icono */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .icon {
-    font-size: 60px;
     margin-bottom: 10px;
+}
+
+.icon img {
+    width: 60px;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
 }
 
 .login-card h1 {
@@ -37,14 +68,17 @@
     margin-bottom: 8px;
 }
 
-.login-card p {
+.subtitle {
     color: #555;
     margin-bottom: 25px;
 }
 
+.field {
+    text-align: left;
+}
+
 .login-card label {
     display: block;
-    text-align: left;
     margin-bottom: 6px;
     color: #0f4c75;
     font-weight: 600;
@@ -58,13 +92,15 @@
     border: 1px solid #ccc;
     outline: none;
     font-size: 14px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.2s;
 }
 
 .login-card input:focus {
     border-color: #3282b8;
+    transform: scale(1.03);
 }
 
+/* Botón con efecto suave */
 .login-card button {
     width: 100%;
     padding: 12px;
@@ -74,12 +110,12 @@
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .login-card button:hover {
     background-color: #0f4c75;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.05);
 }
 
 /* Link */
@@ -89,8 +125,20 @@
     color: #3282b8;
     text-decoration: none;
     font-size: 14px;
+    transition: transform 0.2s;
 }
 
 .link:hover {
     text-decoration: underline;
+    transform: scale(1.05);
+}
+
+/* Imagen que sigue el cursor */
+.cursor-img {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
 }

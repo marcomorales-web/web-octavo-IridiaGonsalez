@@ -1,0 +1,33 @@
+<div class="registro-wrapper">
+  <div class="registro-card">
+
+    <h1>Register</h1>
+    <p class="subtitle">Crea tu cuenta. Es gratis y toma un minuto.</p>
+
+    <form (ngSubmit)="registrar()">
+
+      <div class="row">
+        <input type="text" placeholder="First Name" [(ngModel)]="firstName" name="firstName">
+        <input type="text" placeholder="Last Name" [(ngModel)]="lastName" name="lastName">
+      </div>
+
+      <input type="email" placeholder="Email" [(ngModel)]="email" name="email">
+
+      <input type="password" placeholder="Password" [(ngModel)]="password" name="password">
+
+      <input type="password" placeholder="Confirm Password" [(ngModel)]="confirmPassword" name="confirmPassword">
+
+      <div class="terms">
+        <input type="checkbox" [(ngModel)]="acepta" name="acepta">
+        <label>
+         Acepto los <span>Términos de Uso</span> & <span>Política de Privacidad</span>
+        </label>
+      </div>
+      <button type="submit">Register Now</button>
+
+    </form>
+
+    <link rel="stylesheet" href="registro.css">
+
+  </div>
+</div>

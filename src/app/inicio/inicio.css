@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px;
+  background: white;
+  animation: fadeDown 0.8s ease-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1565c0;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  padding: 8px 18px;
+  background: #1976d2;
+  color: white;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.menu li a:hover {
+  background: #0d47a1;
+  transform: scale(1.05);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 120px;
+  gap: 100px;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+.hero-text {
+  max-width: 500px;
+  animation: fadeLeft 1s ease-out;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.btn-principal {
+  background: #1976d2;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.btn-principal:hover {
+  background: #0d47a1;
+  transform: scale(1.08);
+}
+
+.hero-img img {
+  width: 420px;
+  border-radius: 20px;
+  animation: fadeRight 1.2s ease-out;
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.beneficios {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f5f9ff;
+}
+
+.beneficios h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #1565c0;
+  animation: fadeUp 1s ease-out;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  animation: fadeUp 1.2s ease-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.gatos {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.gatos h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #1565c0;
+  animation: fadeUp 1s ease-out;
+}
+
+.gatos-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gato-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  animation: fadeUp 1.3s ease-out;
+}
+
+.gato-card:hover {
+  transform: translateY(-10px);
+}
+
+.gato-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.gato-card button {
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1976d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gato-card button:hover {
+  background: #0d47a1;
+  transform: scale(1.08);
+}
+
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #e3f2fd;
+  color: #1565c0;
+  margin-top: 60px;
+  animation: fadeUp 1.5s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
